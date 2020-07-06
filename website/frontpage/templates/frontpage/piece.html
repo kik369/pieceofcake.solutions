@@ -1,0 +1,157 @@
+{% extends 'frontpage/base.html' %} {% block title %}Hello! 👋{% endblock %}{% block navbar %}{% endblock navbar %} {% block content %}
+
+<section class="hero is-fullheight has-background-white-bis">
+    <div class="hero-head">
+        {% include "frontpage/sec-navbar.html" %}
+    </div>
+
+    <div class="hero-body">
+        <div class="container">
+
+            <div class="columns is-vcentered is-centered mb-6">
+                <div class="column is-half has-text-centered">
+                    <h1 class="title is-1 is-uppercase has-text-weight-light">Piece Of Cake Solutions</h1>
+                    <h2 class="subtitle is-4 mt-6">
+                        A removal company operating in London, offering fast, reliable and professional service.
+                    </h2>
+                </div>
+            </div>
+            <div class="columns mt-6">
+                <div class="column">
+                    <figure class="image">
+                        <img src="https://ik.imagekit.io/kris/poc/home-hero-image_WXoSjZq4x.svg">
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section is-large">
+    <div class="container">
+
+        <div class="has-text-centered mb-6">
+            <p class="title is-2 is-uppercase">Services</p>
+            <p class="subtitle is-4">These are the services we offer</p>
+            <hr class="poc-hr has-background-primary is-centered">
+        </div>
+
+        <div class="columns is-centered is-multiline is-variable is-6-desktop is-8-widescreen">
+
+            <div class="column is-half-tablet">
+                <div class="card has-text-centered">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 mt-6">Home Move</p>
+                                <figure class="image is-2by1 my-6">
+                                    <img src="https://ik.imagekit.io/kris/poc/home-colorful-light_Bh77pvxIe.svg">
+                                </figure>
+                                <p class="subtitle is-6">A short tag line about home moves.</p>
+                                <a href="{% url 'frontpage:services' %}#home-move" class="button is-light is-rounded mb-6">More
+                  information</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half-tablet">
+                <div class="card has-text-centered">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 mt-6">Office Move</p>
+                                <figure class="image is-2by1 my-6">
+                                    <img src="https://ik.imagekit.io/kris/poc/office-colorful-light_4SO-AeUCv.svg">
+                                </figure>
+                                <p class="subtitle is-6">A short tag line about office moves.</p>
+                                <a href="{% url 'frontpage:services' %}#office-move" class="button is-light is-rounded mb-6">More
+                  information</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half-tablet">
+                <div class="card has-text-centered">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 mt-6">Clearance</p>
+                                <figure class="image is-2by1 my-6">
+                                    <img src="https://ik.imagekit.io/kris/poc/recycling-symbol_IIBLxlmwC.svg">
+                                </figure>
+                                <p class="subtitle is-6">A short tag line about clearance.</p>
+                                <a href="{% url 'frontpage:services' %}#clearance" class="button is-light is-rounded mb-6">More
+                information</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half-tablet">
+                <div class="card has-text-centered">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 mt-6">Handyman Services</p>
+                                <figure class="image is-2by1 my-6">
+                                    <img src="https://ik.imagekit.io/kris/poc/hammer-screwdriver-colorful-light_kufQn0tW1.svg">
+                                </figure>
+                                <p class="subtitle is-6">A short tag line about handyman services.</p>
+                                <a href="{% url 'frontpage:services' %}#handyman-services" class="button is-light is-rounded mb-6">More
+                  information</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="section is-large pb-6 has-background-white-bis">
+    <div class="container">
+        <div class="mb-6">
+            <div class="has-text-centered mb-6">
+                <p class="title is-2 is-uppercase">Contact us</p>
+                <p class="subtitle is-4">Here's how you can find us</p>
+                <hr class="poc-hr has-background-primary is-centered">
+            </div>
+
+            <div class="columns is-centered">
+                <div class="column is-narrow">
+                    <div class="box">
+                        <div class="columns is-vcentered is-centered py-6 is-mobile is-multiline">
+                            <div class="column is-narrow mx-4">
+                                <figure class="image is-128x128">
+                                    <img src="https://ik.imagekit.io/kris/poc/footer-logo_yqgTN_Pry.svg" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="column is-narrow mx-4 has-text-centered-mobile">
+                                <p class="mb-4">
+                                    <strong>Piece of Cake Solutions</strong>
+                                </p>
+                                <p class="mb-3">
+                                    <i class="fas fa-phone fa-lg mr-3"></i><a style="color:hsl(0, 0%, 29%);" href="tel:07532691665">07532-691665</a>
+                                </p>
+                                <p class="mb-3">
+                                    <i class="fas fa-envelope fa-lg mr-3"></i><a style="color:hsl(0, 0%, 29%);" href="mailto:service@pieceofcake.solutions" target="_blank">service@pieceofcake.solutions</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<iframe style="height:600px;width:100%;border:0;padding:0px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.831849673717!2d-0.13397588316605247!3d51.442881879624665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876043043befceb%3A0xe78754d5fba145ad!2s91%20Kirkstall%20Rd%2C%20Streatham%2C%20London%20SW2%204HE!5e0!3m2!1sen!2suk!4v1592387651774!5m2!1sen!2suk"
+    frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> {% include "frontpage/sec-quote.html" %} {% endblock content %}

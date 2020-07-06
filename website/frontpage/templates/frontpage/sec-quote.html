@@ -1,0 +1,107 @@
+<section id="quote" class="section is-large">
+  <div class="container">
+    <div class="has-text-centered mb-6">
+      <p class="title is-2 is-uppercase">Get a quote</p>
+      <p class="subtitle is-4">Enter your details and we will get back to you in 24 hours</p>
+      <hr class="poc-hr has-background-primary is-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-full-tablet is-half-desktop is-half-widescreen is-half-fullhd">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="field">
+            <label for="{{ form.name.id_for_label }}" class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" name="{{ form.name.html_name }}" id="{{ form.name.id_for_label }}"
+                maxlength="100" required>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label for="{{ form.email.id_for_label }}" class="label">Email</label>
+                <div class="control">
+                  <input class="input" type="email" name="{{ form.email.html_name }}" id="{{ form.email.id_for_label }}"
+                    maxlength="100" required>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <label for="{{ form.phone.id_for_label }}" class="label">Phone</label>
+                <div class="control">
+                  <input class="input" type="tel" name="{{ form.phone.html_name }}" id="{{ form.phone.id_for_label }}"
+                    maxlength="30" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label for="{{ form.collectionPostcode.id_for_label }}" class="label">Collection post code</label>
+                <div class="control">
+                  <input class="input" type="text" name="{{ form.collectionPostcode.html_name }}"
+                    id="{{ form.collectionPostcode.id_for_label }}" maxlength="10" required>
+                </div>
+                <p class="help">Moving from</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <label for="{{ form.deliveryPostcode.id_for_label }}" class="label">Delivery post code</label>
+                <div class="control">
+                  <input class="input" type="text" name="{{ form.deliveryPostcode.html_name }}"
+                    id="{{ form.deliveryPostcode.id_for_label }}" maxlength="10">
+                </div>
+                <p class="help">Moving to</p>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label for="{{ form.startDate.id_for_label }}" class="label">Start date</label>
+                <div class="control">
+                  <input class="input" type="date" name="{{ form.startDate.html_name }}"
+                    id="{{ form.startDate.id_for_label }}" required>
+                </div>
+                <p class="help">When would you like to move?</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <label for="{{ form.jobType.id_for_label }}" class="label">Type of service</label>
+                <div class="control is-expanded">
+                  <div class="select is-fullwidth">
+                    <select name="{{ form.jobType.html_name }}" id="{{ form.jobType.id_for_label }}">
+                      {% for choice in form.jobType.field.choices %}
+                      <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="{{ form.details.id_for_label }}" class="label">Additional details (optional)</label>
+            <div class="control">
+              <textarea class="textarea" name="{{ form.details.html_name }}"
+                id="{{ form.details.id_for_label }}"></textarea>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <div class="field">
+                <div class="control">
+                  <input type="submit" class="button is-primary is-rounded is-fullwidth" value="Submit">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

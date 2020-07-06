@@ -1,0 +1,54 @@
+{% extends 'frontpage/base.html' %}
+{% block title %}A few words about our company{% endblock %}
+{% block navbar %}{% endblock navbar %}
+{% block content %}
+{% comment %} <div class="div-img">
+    <img src="https://ik.imagekit.io/kris/website-top-right_hrd-60CqRb-.svg">
+</div> {% endcomment %}
+
+<section class="hero is-fullheight has-background-white-bis">
+    <div class="hero-head">
+        {% include "frontpage/sec-navbar.html" %}
+    </div>
+
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered has-text-centered">
+                <div class="column is-half">
+                    <div class="image">
+                        <img src="https://ik.imagekit.io/kris/Asset_5_2x_YxyKNM9go8h.png" alt="">
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <p class="title is-2 is-uppercase">About us</p>
+                    <p class="subtitle is-4">A short tag line about us</p>
+                    <hr class="poc-hr has-background-primary is-centered mb-6">
+                    <div class="content">
+                        <p class="has-text-left">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam rerum magnam
+                            ipsa
+                            voluptates assumenda dolorum, impedit aspernatur eaque tenetur. Nesciunt, aut. Laboriosam
+                            nemo
+                            saepe quam nisi! Temporibus, suscipit accusantium?
+                        </p>
+                        <p class="has-text-left">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam rerum magnam
+                            ipsa
+                            voluptates assumenda dolorum, impedit aspernatur eaque tenetur. Nesciunt, aut. Laboriosam
+                            nemo
+                            saepe quam nisi! Temporibus, suscipit accusantium?
+                        </p>
+                        <p class="has-text-left">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam rerum magnam
+                            ipsa
+                            voluptates assumenda dolorum, impedit aspernatur eaque tenetur. Nesciunt, aut. Laboriosam
+                            nemo
+                            saepe quam nisi! Temporibus, suscipit accusantium?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

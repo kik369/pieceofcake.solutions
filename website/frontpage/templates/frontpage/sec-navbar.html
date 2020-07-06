@@ -1,0 +1,48 @@
+<section class="section has-background-white-bis">
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{% url 'frontpage:piece' %}">
+                    <img src="https://ik.imagekit.io/kris/poc/poc-sel-no-bg_jvhaOY-9uGu.svg" width="204" height="112">
+                </a>
+                <!-- light letters https://ik.imagekit.io/kris/poc_logo_white_pqC60AVSv.svg -->
+                <!-- dark letters https://ik.imagekit.io/kris/poc/poc-sel-no-bg_jvhaOY-9uGu.svg -->
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start has-text-weight-semibold">
+                    <a class="navbar-item mx-2" href="{% url 'frontpage:services' %}#home-move">
+                        Home Move
+                    </a>
+                    <a class="navbar-item mx-2" href="{% url 'frontpage:services' %}#office-move">
+                        Office Move
+                    </a>
+                    <a class="navbar-item mx-2" href="{% url 'frontpage:services' %}#clearance">
+                        Clearance
+                    </a>
+                    <a class="navbar-item mx-2" href="{% url 'frontpage:services' %}#handyman-services">
+                        Handyman Services
+                    </a>
+                    <a class="navbar-item mx-2" href="{% url 'frontpage:about' %}">
+                        About Us
+                    </a>
+                    <a class="navbar-item mx-2" href="{% url 'frontpage:piece' %}#contact">
+                        Contact
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a class="button is-medium is-rounded is-primary" href="{% url 'frontpage:piece' %}#quote">
+                            <strong>Get a Quote</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
