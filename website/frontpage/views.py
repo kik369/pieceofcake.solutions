@@ -16,14 +16,6 @@ class HomeView(generic.TemplateView):
 class ContactSuccessView(generic.TemplateView):
     template_name = 'frontpage/thanks.html'
 
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super().get_context_data(**kwargs)
-        # Add
-        context.update({'sheep': 'baa'})
-        context['name'] = 67
-        return context
-
 
 class ServicesView(generic.TemplateView):
     template_name = 'frontpage/services.html'
@@ -33,5 +25,10 @@ class AboutView(generic.TemplateView):
     template_name = 'frontpage/about.html'
 
 
-class TestView(generic.TemplateView):
-    template_name = 'frontpage/test-content-2.html'
+def robots(request):
+    response = HttpResponse('User-agent: *\nSitemap: http://pieceofcake.solutions/sitemap.xml', content_type='text/plain')
+    return response
+
+
+class SitemapView(generic.TemplateView):
+    template_name = 'frontpage/sitemap.xml'

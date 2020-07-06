@@ -9,5 +9,6 @@ urlpatterns = [
     path('services/', views.ServicesView.as_view(), name='services'),
     path('thanks/', views.ContactSuccessView.as_view(), name='thanks'),
     path('about/', views.AboutView.as_view(), name='about'),
-    path('test/', views.TestView.as_view(), name='test'),
+    path('robots.txt', views.robots, name='robots'),
+    path('sitemap.xml', views.SitemapView.as_view(), name='sitemap'),
 ]
