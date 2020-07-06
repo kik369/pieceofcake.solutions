@@ -8,8 +8,6 @@ $yellow: #FBC010;
 $green: #5FC4B4;
 $pink: #EE367A;
 $white-bis: #F4F5F9;
-// $grey-dark: #878B8D;
-// $grey-light: #EBF4F9;
 // Update Bulma's global variables
 $family-sans-serif: 'Open Sans',
 sans-serif;
@@ -23,7 +21,5 @@ $danger: $pink;
 $navbar-height: 2rem * 4;
 $navbar-item-img-max-height: 1.75rem * 4;
 $navbar-background-color: transparent;
-// $navbar-item-color: $white-bis;
-// $variable-columns: false;
 // Import only what you need from Bulma
 @import "bulma.sass";
