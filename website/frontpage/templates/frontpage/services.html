@@ -1,7 +1,8 @@
-{% extends 'frontpage/base.html' %} {% block title %}Services! 🚛{% endblock %} {% block content %}
-<section id="home-move" class="section is-large poc-bg-image" style="background-image: url('https://ik.imagekit.io/kris/poc/brown-wooden-center-table-584399_QvwIdl0p0NV.jpg')">
-    <!-- https://ik.imagekit.io/kris/poc/brown-wooden-center-table-584399_QvwIdl0p0NV.jpg
-    https://ik.imagekit.io/kris/poc/179393-OWJAL2-155_af5o41pfkt9.jpg -->
+{% extends 'frontpage/base.html' %}
+{% load static %}
+{% block title %}Services! 🚛{% endblock %}
+{% block content %}
+<section id="home-move" class="section is-large poc-bg-image" style="background-image: url('{% static "frontpage/img/bg-home.jpg" %}')">
     <div class="container">
 
         <div class="columns is-vcentered">
@@ -15,13 +16,8 @@
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
-                <!-- <p class="has-background-white px-4 py-4 has-text-centered">
-          <a class="button is-rounded is-warning" href="{% url 'frontpage:piece' %}#quote">
-            <strong>Get a Quote</strong>
-          </a>
-        </p> -->
                 <div class="has-text-centered mt-4">
-                    <a class="button is-rounded is-warning" href="{% url 'frontpage:piece' %}#quote">
+                    <a class="button is-rounded is-warning" href="{% url 'frontpage:home' %}#quote">
                         <strong>Get a Quote</strong>
                     </a>
                 </div>
@@ -44,20 +40,15 @@
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
-                <!-- <p class="has-background-white px-4 py-4 has-text-centered">
-          <a class="button is-rounded is-link" href="{% url 'frontpage:piece' %}#quote">
-            <strong>Get a Quote</strong>
-          </a>
-        </p> -->
                 <div class="has-text-centered mt-4">
-                    <a class="button is-rounded is-link" href="{% url 'frontpage:piece' %}#quote">
+                    <a class="button is-rounded is-link" href="{% url 'frontpage:home' %}#quote">
                         <strong>Get a Quote</strong>
                     </a>
                 </div>
             </div>
             <div class="column">
                 <figure class="image">
-                    <img src="https://ik.imagekit.io/kris/poc/undraw_co-working_825n_rB4eC1nOQhh.svg">
+                    <img src="{% static 'frontpage/img/office-workers.svg' %}">
                 </figure>
             </div>
         </div>
@@ -65,7 +56,7 @@
     </div>
 </section>
 
-<section id="clearance" class="section is-large poc-bg-image" style="background-image: url('https://ik.imagekit.io/kris/poc/pawel-czerwinski-RkIsyD_AVvc-unsplash_LzRobx3felU.jpg')">
+<section id="clearance" class="section is-large poc-bg-image" style="background-image: url('{% static 'frontpage/img/bins.jpg' %}')">
     <div class="container">
 
         <div class="columns is-vcentered">
@@ -79,13 +70,8 @@
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
-                <!-- <p class="has-background-white px-4 py-4 has-text-centered">
-          <a class="button is-rounded is-danger" href="{% url 'frontpage:piece' %}#quote">
-            <strong>Get a Quote</strong>
-          </a>
-        </p> -->
                 <div class="has-text-centered mt-4">
-                    <a class="button is-rounded is-primary" href="{% url 'frontpage:piece' %}#quote">
+                    <a class="button is-rounded is-primary" href="{% url 'frontpage:home' %}#quote">
                         <strong>Get a Quote</strong>
                     </a>
                 </div>
@@ -108,20 +94,15 @@
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
                 <p class="has-background-white px-4 py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla ex repellat impedit nam? Cupiditate tempora quae officia vero nihil libero molestias, commodi illum quaerat, sed nesciunt nam unde quibusdam dolore!</p>
-                <!-- <p class="has-background-white px-4 py-4 has-text-centered">
-        <a class="button is-rounded is-link" href="{% url 'frontpage:piece' %}#quote">
-          <strong>Get a Quote</strong>
-        </a>
-      </p> -->
                 <div class="has-text-centered mt-4">
-                    <a class="button is-rounded is-danger" href="{% url 'frontpage:piece' %}#quote">
+                    <a class="button is-rounded is-danger" href="{% url 'frontpage:home' %}#quote">
                         <strong>Get a Quote</strong>
                     </a>
                 </div>
             </div>
             <div class="column">
                 <figure class="image">
-                    <img src="https://ik.imagekit.io/kris/poc/25694_OI5vLBPRoIL.jpg">
+                    <img src="{% static 'frontpage/img/handyman.jpg' %}">
                 </figure>
             </div>
         </div>

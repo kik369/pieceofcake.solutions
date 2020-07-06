@@ -1,10 +1,8 @@
 {% extends 'frontpage/base.html' %}
+{% load static %}
 {% block title %}Thanks for your query{% endblock %}
 {% block navbar %}{% endblock navbar %}
 {% block content %}
-{% comment %} <div class="div-img">
-    <img src="https://ik.imagekit.io/kris/website-top-right_hrd-60CqRb-.svg">
-</div> {% endcomment %}
 
 <section class="hero is-fullheight has-background-white-bis">
     <div class="hero-head">
@@ -16,7 +14,7 @@
             <div class="columns is-vcentered has-text-centered">
                 <div class="column is-half">
                     <div class="image">
-                        <img src="https://ik.imagekit.io/kris/poc/van-website_xNUyIlNJm.svg" alt="">
+                        <img src="{% static 'frontpage/img/van-baloons.svg' %}" alt="">
                     </div>
                 </div>
                 <div class="column is-half">

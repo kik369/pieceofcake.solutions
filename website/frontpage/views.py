@@ -5,10 +5,6 @@ from .forms import ContactForm
 
 class HomeView(generic.TemplateView):
     template_name = 'frontpage/home.html'
-
-
-class PieceView(FormView):
-    template_name = 'frontpage/piece.html'
     form_class = ContactForm
     success_url = '/thanks/'
 
