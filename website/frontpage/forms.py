@@ -36,7 +36,7 @@ class ContactForm(forms.Form):
             f'{self.cleaned_data["email"]}',
 
             # to
-            ['kris@refaktor.dev', f'{self.cleaned_data["email"]}'],
+            ['kris@refaktor.dev'],
 
             html_message=f'A new query from <a href="https://pieceofcake.solutions/">pieceofcake.solutions</a> has been received<br>' +
             f'These are the details:<br><br>' +
