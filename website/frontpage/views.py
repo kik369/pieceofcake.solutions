@@ -1,9 +1,12 @@
 from django.views import generic
-from django.views.generic.edit import FormView
 from .forms import ContactForm
 
 
-class HomeView(generic.TemplateView):
+class IndexView(generic.TemplateView):
+    template_name = 'frontpage/index.html'
+
+
+class HomeView(generic.edit.FormView):
     template_name = 'frontpage/home.html'
     form_class = ContactForm
     success_url = '/thanks/'

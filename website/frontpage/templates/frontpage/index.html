@@ -1,0 +1,32 @@
+<!DOCTYPE html>{% load static %}
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168441846-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168441846-1');
+    </script>
+
+    <title>Piece of Cake</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="https://ik.imagekit.io/kris/poc/poc_favicon_rZTH9MBsz.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <div class="uk-cover-container" uk-height-viewport>
+        <img src="{% static 'frontpage/img/index-logo.svg' %}" alt="pieceofcake.solutions" uk-cover>
+    </div>
+</body>
+
+</html>

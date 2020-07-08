@@ -1,6 +1,5 @@
 from django import forms
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
+from django.core.mail import send_mail
 from decouple import config
 from datetime import datetime, timedelta
 
@@ -21,25 +20,25 @@ class ContactForm(forms.Form):
 
         daysUntil = self.cleaned_data["startDate"] - datetime.now().date()
 
-        if daysUntil.days < 3:
+        if daysUntil.days < 14:
             label = 'urgent'
         else:
             label = 'normal'
 
-        customer_email = self.cleaned_data["email"]
-        customer_name = self.cleaned_data["name"]
+        send_mail(
+            # subject
+            'Query from pieceofcake.solutions website',
 
-        to_emails = [
-            ('kristapsk@gmail.com', 'Default Recipient'),
-            (f'{customer_email}', f'{customer_name}'),
-        ]
+            # message
+            f'',
 
-        message = Mail(
-            from_email=(
-                'service@pieceofcake.solutions', 'Piece of Cake Solutions'),
-            to_emails=to_emails,
-            subject='Query from pieceofcake.solutions website',
-            html_content=f'A new query has been received from <a href="https://pieceofcake.solutions/">pieceofcake.solutions</a><br>' +
+            # from
+            f'{self.cleaned_data["email"]}',
+
+            # to
+            ['kris@refaktor.dev', f'{self.cleaned_data["email"]}'],
+
+            html_message=f'A new query from <a href="https://pieceofcake.solutions/">pieceofcake.solutions</a> has been received<br>' +
             f'These are the details:<br><br>' +
             f'<strong>Name:</strong> {self.cleaned_data["name"]}<br>' +
             f'<strong>Email:</strong> {self.cleaned_data["email"]}<br>' +
@@ -50,7 +49,5 @@ class ContactForm(forms.Form):
             f'<strong>Job type:</strong> {self.cleaned_data["jobType"]}<br>' +
             f'<strong>Label:</strong> {label}<br>' +
             f'<strong>Optional details:</strong> {self.cleaned_data["details"]}',
-            is_multiple=True)
-
-        sendgrid_client = SendGridAPIClient(config('SENDGRID_API_KEY'))
-        response = sendgrid_client.send(message)
+            fail_silently=False,
+        )
