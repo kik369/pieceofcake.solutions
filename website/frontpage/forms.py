@@ -33,10 +33,10 @@ class ContactForm(forms.Form):
             f'',
 
             # from
-            f'{self.cleaned_data["email"]}',
+            f'peter@pieceofcake.solutions.com',
 
             # to
-            ['kris@refaktor.dev'],
+            [config('DEFAULT_TO_EMAIL'), f'{self.cleaned_data["email"]}'],
 
             html_message=f'A new query from <a href="https://pieceofcake.solutions/">pieceofcake.solutions</a> has been received<br>' +
             f'These are the details:<br><br>' +
