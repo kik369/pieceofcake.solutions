@@ -1,6 +1,6 @@
 {% extends 'frontpage/base.html' %}
 {% load static %}
-{% block title %}Thanks for your query 🙏{% endblock %}
+{% block title %}Something went wrong 🙈{% endblock %}
 {% block navbar %}{% endblock navbar %}
 {% block content %}
 
@@ -14,15 +14,14 @@
             <div class="columns is-vcentered has-text-centered">
                 <div class="column is-half">
                     <div class="image">
-                        <img src="{% static 'frontpage/img/van-baloons.svg' %}" alt="">
+                        <img src="{% static 'frontpage/img/500.svg' %}" alt="">
                     </div>
                 </div>
                 <div class="column is-half">
-                    <p class="title is-2 is-uppercase">Your email has been sent</p>
-                    <p class="subtitle is-4">Sit back and relax. Piece Of Cake have received your email and a
-                        confirmation email has been
-                        sent to you too.</p>
-                    <hr class="poc-hr has-background-primary is-centered mb-6">
+                    <p class="title is-2 is-uppercase">500</p>
+                    <p class="subtitle is-4">Internal server error. If this persists, please email <a href="mailto:kris@refaktor.dev" target="_blank">the website admin</a>.</p>
+                    <p class="subtitle is-4">Go back to <a href="{% url 'frontpage:home' %}">pieceofcake.solutions</a>.</p>
+                    <hr class="poc-hr has-background-danger is-centered mb-6">
                 </div>
             </div>
         </div>
