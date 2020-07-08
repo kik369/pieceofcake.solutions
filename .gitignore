@@ -137,4 +137,3 @@ app.yaml
 cloud_sql_proxy.exe
 requirements.txt
 settings copy.py
-forms copy.py
