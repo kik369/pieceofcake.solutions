@@ -1,6 +1,7 @@
 {% extends 'frontpage/base.html' %}
 {% load static %}
 {% block title %}Services! 🚛{% endblock %}
+{% block description %}A removal company operating in London, offering fast, reliable and professional service.{% endblock description %}
 {% block content %}
 <section id="home-move" class="section is-large poc-bg-image" style="background-image: url('{% static "frontpage/img/bg-home.jpg" %}')">
     <div class="container">
@@ -48,7 +49,7 @@
             </div>
             <div class="column">
                 <figure class="image is-hidden-mobile">
-                    <img src="{% static 'frontpage/img/office-workers.svg' %}">
+                    <img src="{% static 'frontpage/img/office-workers.svg' %}" alt="Office move">
                 </figure>
             </div>
         </div>
@@ -103,7 +104,7 @@
             </div>
             <div class="column">
                 <figure class="image is-hidden-mobile">
-                    <img src="{% static 'frontpage/img/globe.svg' %}">
+                    <img src="{% static 'frontpage/img/globe.svg' %}" alt="Clearance">
                 </figure>
             </div>
         </div>

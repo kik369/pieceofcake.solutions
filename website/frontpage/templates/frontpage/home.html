@@ -1,7 +1,8 @@
 {% extends 'frontpage/base.html' %}
 {% load static %}
 {% load icon %}
-{% block title %}Hello! 👋{% endblock %}
+{% block title %}Hello! 👋{% endblock title %}
+{% block description %}A removal company operating in London, offering fast, reliable and professional service.{% endblock description %}
 {% block navbar %}{% endblock navbar %}
 {% block content %}
 
@@ -24,7 +25,7 @@
             <div class="columns mt-6">
                 <div class="column">
                     <figure class="image">
-                        <img src="{% static 'frontpage/img/home-hero.svg' %}">
+                        <img src="{% static 'frontpage/img/home-hero.svg' %}" alt="pieceofcake.solutions">
                     </figure>
                 </div>
             </div>
@@ -51,7 +52,7 @@
                             <div class="media-content">
                                 <p class="title is-4 mt-6">Home Move</p>
                                 <figure class="image is-2by1 my-6">
-                                    <img src="{% static 'frontpage/img/icon-home.svg' %}">
+                                    <img src="{% static 'frontpage/img/icon-home.svg' %}" alt="Home Move">
                                 </figure>
                                 <p class="subtitle is-6">A short tag line about home moves.</p>
                                 <a href="{% url 'frontpage:services' %}#home-move" class="button is-light is-rounded mb-6">More
@@ -69,7 +70,7 @@
                             <div class="media-content">
                                 <p class="title is-4 mt-6">Office Move</p>
                                 <figure class="image is-2by1 my-6">
-                                    <img src="{% static 'frontpage/img/icon-office.svg' %}">
+                                    <img src="{% static 'frontpage/img/icon-office.svg' %}" alt="Office Move">
                                 </figure>
                                 <p class="subtitle is-6">A short tag line about office moves.</p>
                                 <a href="{% url 'frontpage:services' %}#office-move" class="button is-light is-rounded mb-6">More
@@ -87,7 +88,7 @@
                             <div class="media-content">
                                 <p class="title is-4 mt-6">Clearance</p>
                                 <figure class="image is-2by1 my-6">
-                                    <img src="{% static 'frontpage/img/icon-recycle.svg' %}">
+                                    <img src="{% static 'frontpage/img/icon-recycle.svg' %}" alt="Clearance">
                                 </figure>
                                 <p class="subtitle is-6">A short tag line about clearance.</p>
                                 <a href="{% url 'frontpage:services' %}#clearance" class="button is-light is-rounded mb-6">More
@@ -105,7 +106,7 @@
                             <div class="media-content">
                                 <p class="title is-4 mt-6">Handyman Services</p>
                                 <figure class="image is-2by1 my-6">
-                                    <img src="{% static 'frontpage/img/icon-hammer.svg' %}">
+                                    <img src="{% static 'frontpage/img/icon-hammer.svg' %}" alt="Handyman Services">
                                 </figure>
                                 <p class="subtitle is-6">A short tag line about handyman services.</p>
                                 <a href="{% url 'frontpage:services' %}#handyman-services" class="button is-light is-rounded mb-6">More
@@ -139,7 +140,7 @@
                             </div>
                             <div class="column is-narrow">
                                 <figure class="image is-128x128">
-                                    <img src="{% static 'frontpage/img/poc-logo-roung.svg' %}" alt="Image">
+                                    <img src="{% static 'frontpage/img/poc-logo-roung.svg' %}" alt="Piece Of Cake logo">
                                 </figure>
                             </div>
                             <div class="column is-narrow">
