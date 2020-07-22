@@ -16,7 +16,7 @@
 
             <div class="columns is-vcentered is-centered mb-6">
                 <div class="column is-half has-text-centered">
-                    <h1 class="title is-1 is-uppercase has-text-weight-light">Piece Of Cake Solutions</h1>
+                    <h1 class="title is-1 is-uppercase">Piece Of Cake Solutions</h1>
                     <h2 class="subtitle is-4 mt-6">
                         A removal company operating in London, offering fast, reliable and professional service.
                     </h2>
@@ -55,8 +55,12 @@
                                     <img src="{% static 'frontpage/img/icon-home.svg' %}" alt="Home Move">
                                 </figure>
                                 <p class="subtitle is-6">A short tag line about home moves.</p>
-                                <a href="{% url 'frontpage:services' %}#home-move" class="button is-light is-rounded mb-6">More
-                  information</a>
+                                <a href="{% url 'frontpage:services' %}#home-move" class="button is-light is-rounded mb-6">
+                                    <span>I'm interested in moving home</span>
+                                    <span class="icon">
+                                        {% icon 'arrow-right' class="has-text-warning" %}
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -73,8 +77,12 @@
                                     <img src="{% static 'frontpage/img/icon-office.svg' %}" alt="Office Move">
                                 </figure>
                                 <p class="subtitle is-6">A short tag line about office moves.</p>
-                                <a href="{% url 'frontpage:services' %}#office-move" class="button is-light is-rounded mb-6">More
-                  information</a>
+                                <a href="{% url 'frontpage:services' %}#office-move" class="button is-light is-rounded mb-6">
+                                    <span>I'm interested in moving office</span>
+                                    <span class="icon">
+                                        {% icon 'arrow-right' class="has-text-link" %}
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -91,8 +99,12 @@
                                     <img src="{% static 'frontpage/img/icon-recycle.svg' %}" alt="Clearance">
                                 </figure>
                                 <p class="subtitle is-6">A short tag line about clearance.</p>
-                                <a href="{% url 'frontpage:services' %}#clearance" class="button is-light is-rounded mb-6">More
-                information</a>
+                                <a href="{% url 'frontpage:services' %}#clearance" class="button is-light is-rounded mb-6">
+                                    <span>I'm interested in clearance services</span>
+                                    <span class="icon">
+                                        {% icon 'arrow-right' class="has-text-primary" %}
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -109,8 +121,12 @@
                                     <img src="{% static 'frontpage/img/icon-hammer.svg' %}" alt="Handyman Services">
                                 </figure>
                                 <p class="subtitle is-6">A short tag line about handyman services.</p>
-                                <a href="{% url 'frontpage:services' %}#handyman-services" class="button is-light is-rounded mb-6">More
-                  information</a>
+                                <a href="{% url 'frontpage:services' %}#handyman-services" class="button is-light is-rounded mb-6">
+                                    <span>I'm interested in handyman services</span>
+                                    <span class="icon">
+                                        {% icon 'arrow-right' class="has-text-danger" %}
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
