@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .poc-hr {
     height: 0.5rem;
     width: 8rem;
