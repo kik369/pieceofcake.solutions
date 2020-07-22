@@ -91,17 +91,6 @@
                 id="{{ form.details.id_for_label }}"></textarea>
             </div>
           </div>
-
-          <div id="homeMoveDiv">
-            <p>home move specific</p>
-          </div>
-          <div id="officeMoveDiv">
-            <p>office move specific</p>
-          </div>
-          <div id="handymanDiv">
-            <p>handyman specific</p>
-          </div>
-
           <div class="columns is-centered">
             <div class="column is-one-third">
               <div class="field">
@@ -115,24 +104,4 @@
       </div>
     </div>
   </div>
-
-  <script>
-    $("#{{ form.jobType.id_for_label }}").change(function() {
-      if ($(this).val() == "Home move") {
-        $('#homeMoveDiv').show();
-        $('#officeMoveDiv').hide();
-        $('#handymanDiv').hide();
-      } else if ($(this).val() == "Office move") {
-        $('#officeMoveDiv').show();
-        $('#homeMoveDiv').hide();
-        $('#handymanDiv').hide();
-      } else if ($(this).val() == "Handyman services") {
-        $('#handymanDiv').show();
-        $('#homeMoveDiv').hide();
-        $('#officeMoveDiv').hide();
-      }
-    });
-    $("#{{ form.jobType.id_for_label }}").trigger("change");
-  </script>
-
 </section>
