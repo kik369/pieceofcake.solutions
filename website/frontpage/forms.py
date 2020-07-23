@@ -2,6 +2,8 @@ from django import forms
 from django.core.mail import send_mail
 from decouple import config
 from datetime import datetime, timedelta
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV3
 
 
 class ContactForm(forms.Form):
@@ -15,6 +17,7 @@ class ContactForm(forms.Form):
     jobType = forms.ChoiceField(choices=([('Home move', 'Home move'), (
         'Office move', 'Office move'), ('Handyman services', 'Handyman services')]), required=True)
     details = forms.CharField(widget=forms.Textarea, required=False)
+    captcha = ReCaptchaField(widget=ReCaptchaV3(attrs={'data-badge': 'bottomleft'}))
 
     def seng_grid_go(self):
 
